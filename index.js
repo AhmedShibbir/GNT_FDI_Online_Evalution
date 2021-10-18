@@ -45,8 +45,8 @@ function modalOperation(){
         dashboard.setAttribute("id", "dashboard");
         dashboard.innerHTML = `
             <div class=" d-flex flex-column w-25 py-5 align-items-center">
-                <a id = "customerList"class="text-white text-decoration-none my-5 px-5 py-2 bg-success bg-opacity-50 fw-bold border" src="/index.html">Customer List</a>
-                <a id = "addCustomer" class="text-white text-decoration-none my-5 px-5 py-2 bg-success bg-opacity-50 fw-bold border" src="/index.html">Add Customer</a>
+                <a id = "customerList"class="text-white text-decoration-none my-2 px-5 py-2 bg-success bg-opacity-50 fw-bold border" src="/index.html">Customer List</a>
+                <a id = "addCustomer" class="text-white text-decoration-none my-2 px-5 py-2 bg-success bg-opacity-50 fw-bold border" src="/index.html">Add Customer</a>
                 <a id ="exit" class="text-white text-decoration-none my-5 px-5 py-2 bg-success bg-opacity-50 fw-bold border" src="/index.html">Exit</a>
             </div>
             <div id = "infoPart" class=" bg-success w-75 d-flex py-5 flex-column align-items-center">
@@ -148,29 +148,33 @@ function dashboardOperation(){
         addSingleCustomar.innerHTML = `
             <div class="d-flex align-center justify-content-center my-3">
                 <p class="px-5 fw-bold">Name : </p>
-                <input class = "ms-3 px-3" type="text" placeholder ="Enter Name">
+                <input class = "ms-1 px-3" type="text" placeholder ="Enter Name">
             </div>
 
             <div class="d-flex align-center justify-content-center my-3">
                 <p class="px-5 fw-bold">User Name : </p>
-                <input class = "px-3" type="text" placeholder ="Enter Username">
+                <input class = "px-3" type="text" placeholder ="Enter a Username">
             </div>
 
             <div class="d-flex align-center justify-content-center my-3">
                 <p class="px-5 fw-bold">Email : </p>
-                <input class = "ms-3 px-3" type="text" placeholder ="Enter Email">
+                <input class = "ms-1 px-3" type="text" placeholder ="Enter Email address">
             </div>
 
             <div class="d-flex align-center justify-content-center my-3">
                 <p class="px-5 fw-bold">Gender : </p>
-                <input class = "ms-3 px-3" type="text" placeholder ="Gender">
+                <input class = "ms-1 px-3" type="text" placeholder ="Enter your Gender">
             </div>
 
             <div class="d-flex align-center justify-content-center my-3">
             <p class="px-5 fw-bold">City : </p>
-            <input class = "ms-3 px-3" type="text" placeholder ="Enter City">
+            <input class = "ms-1 px-3" type="text" placeholder ="Enter the City you belong!">
             </div>
-            <button type="submit" class="d-flex align-center justify-content-center fw-bold btn btn-warning my-3 mx-auto w-25">Submit</button>
+
+            <div class="d-flex justify-content-center w-25 mx-auto my-3">
+                <button type="submit" class="fw-bold btn btn-warning px-3 ms-5">Submit</button>
+            </div>
+            
         `;
         infoPart.appendChild(addSingleCustomar);
     });
