@@ -11,3 +11,11 @@ body{
     z-index: 1;
     color: black;
 }
+#dashboard{
+    position: absolute;
+    left: 15.37%;
+    top: 30%;
+    z-index: 1;
+    color: black;
+    height: 50%;
+}
