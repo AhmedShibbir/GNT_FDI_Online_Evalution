@@ -64,6 +64,7 @@ function modalOperation(){
     count = 0;
 });
 }
+// dashboard options part 
 function dashboardOperation(){
     const dashboard = document.getElementById("dashboard");
     const exit = document.getElementById("exit");
@@ -71,6 +72,7 @@ function dashboardOperation(){
         document.getElementById("body").removeChild(dashboard);
         count=0;
     });
+    // customer list part 
     const customerList = document.getElementById("customerList");
     customerList.addEventListener("click",()=>{
         const customerTable = document.createElement("div");
@@ -136,8 +138,42 @@ function dashboardOperation(){
         infoPart.innerHTML = " ";
         infoPart.appendChild(customerTable);
     });
-    const addSingleCustomer = document.getElementById("addCustomer");
-    
+    // add customer part 
+    const addCustomer = document.getElementById("addCustomer");
+    addCustomer.addEventListener("click", ()=>{
+        const infoPart = document.getElementById("infoPart");
+        infoPart.innerHTML = " ";
+        const addSingleCustomar = document.createElement("form");
+        addSingleCustomar.setAttribute("class","d-flex flex-column align-center justify-content-center w-75 mx-auto")
+        addSingleCustomar.innerHTML = `
+            <div class="d-flex align-center justify-content-center my-3">
+                <p class="px-5 fw-bold">Name : </p>
+                <input class = "ms-3 px-3" type="text" placeholder ="Enter Name">
+            </div>
+
+            <div class="d-flex align-center justify-content-center my-3">
+                <p class="px-5 fw-bold">User Name : </p>
+                <input class = "px-3" type="text" placeholder ="Enter Username">
+            </div>
+
+            <div class="d-flex align-center justify-content-center my-3">
+                <p class="px-5 fw-bold">Email : </p>
+                <input class = "ms-3 px-3" type="text" placeholder ="Enter Email">
+            </div>
+
+            <div class="d-flex align-center justify-content-center my-3">
+                <p class="px-5 fw-bold">Gender : </p>
+                <input class = "ms-3 px-3" type="text" placeholder ="Gender">
+            </div>
+
+            <div class="d-flex align-center justify-content-center my-3">
+            <p class="px-5 fw-bold">City : </p>
+            <input class = "ms-3 px-3" type="text" placeholder ="Enter City">
+            </div>
+            <button type="submit" class="d-flex align-center justify-content-center fw-bold btn btn-warning my-3 mx-auto w-25">Submit</button>
+        `;
+        infoPart.appendChild(addSingleCustomar);
+    });
     
 }
 
