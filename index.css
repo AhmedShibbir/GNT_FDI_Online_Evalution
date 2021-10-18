@@ -4,3 +4,10 @@ body{
 #mainSection{
     position: relative;
 }
+#modal{
+    position: absolute;
+    left: 25%;
+    top: 20%;
+    z-index: 1;
+    color: black;
+}
